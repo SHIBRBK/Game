@@ -8,6 +8,8 @@ public:
 	void Update();
 	void Draw();
 	void Release();
+	void Move();
 private:
+
 };
 
