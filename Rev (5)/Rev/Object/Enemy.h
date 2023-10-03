@@ -1,5 +1,9 @@
 #pragma once
+#include<memory>
 #include "EnemyBase.h"
+class Enemy;
+using uniqueEnemy = std::unique_ptr<Enemy>;
+
 class Enemy :
     public EnemyBase
 {

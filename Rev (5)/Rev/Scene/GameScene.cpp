@@ -11,7 +11,10 @@ GameScene::GameScene(SceneManager& manager) :BaseScene(manager)
 
 bool GameScene::Init()
 {
-	object_=actor_.(std::make_unique<Player>());
+	player_ = std::make_unique<Player>();
+	player_->Init();
+
+
 	actor_.push_front(std::make_unique<Enemy>());
 	sceneManager_.GetCamera()->SetPlayerPos(&player_->GetTransform());
 	sceneManager_.GetCamera()->ChangeMode(Camera::MODE::FOLLOW);

@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>17.0</VCProjectVersion>
+    <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{de8abf63-b655-4337-9c7e-e7496516361c}</ProjectGuid>
-    <RootNamespace>Rev</RootNamespace>
+    <ProjectGuid>{66129777-a04b-4b09-ab49-7ce8e20371b9}</ProjectGuid>
+    <RootNamespace>Vam</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -71,18 +71,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(DXLIB_DIR);$(IncludePath)</IncludePath>
     <LibraryPath>$(DXLIB_DIR);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXLIB_DIR);$(IncludePath)</IncludePath>
     <LibraryPath>$(DXLIB_DIR);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(DXLIB_DIR);$(IncludePath)</IncludePath>
     <LibraryPath>$(DXLIB_DIR);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXLIB_DIR);$(IncludePath)</IncludePath>
     <LibraryPath>$(DXLIB_DIR);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -151,53 +155,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Object\ActorBase.cpp" />
-    <ClCompile Include="Common\Quaternion.cpp" />
-    <ClCompile Include="Common\Transform.cpp" />
-    <ClCompile Include="Object\ObjectBase.cpp" />
     <ClCompile Include="Object\Camera.cpp" />
-    <ClCompile Include="Scene\Manager\AssetsManager.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Scene\Manager\ObjectManager.cpp" />
-    <ClCompile Include="Scene\KeyConfigScene.cpp" />
-    <ClCompile Include="Scene\Manager\InputManager.cpp" />
-    <ClCompile Include="Object\Boss.cpp" />
-    <ClCompile Include="Object\Enemy.cpp" />
-    <ClCompile Include="Object\EnemyBase.cpp" />
-    <ClCompile Include="Object\Player.cpp" />
-    <ClCompile Include="Scene\PauseScene.cpp" />
-    <ClCompile Include="Scene\GameScene.cpp" />
-    <ClCompile Include="Scene\ResultScene.cpp" />
-    <ClCompile Include="Scene\Manager\SceneManager.cpp" />
+    <ClCompile Include="Manager\InputManager.cpp" />
+    <ClCompile Include="Manager\SceneManager.cpp" />
+    <ClCompile Include="Common\Quaternion.cpp" />
     <ClCompile Include="Scene\BaseScene.cpp" />
+    <ClCompile Include="Scene\GameScene.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Scene\ResultScene.cpp" />
     <ClCompile Include="Scene\SelectScene.cpp" />
     <ClCompile Include="Scene\TitleScene.cpp" />
-    <ClCompile Include="Object\Stage.cpp" />
-    <ClCompile Include="Object\Weapon.cpp" />
+    <ClCompile Include="Common\Transform.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Object\ActorBase.h" />
-    <ClInclude Include="Common\Quaternion.h" />
-    <ClInclude Include="Common\Transform.h" />
-    <ClInclude Include="Object\ObjectBase.h" />
     <ClInclude Include="Object\Camera.h" />
-    <ClInclude Include="Scene\Manager\AssetsManager.h" />
-    <ClInclude Include="Scene\Manager\ObjectManager.h" />
-    <ClInclude Include="Scene\KeyConfigScene.h" />
-    <ClInclude Include="Scene\Manager\InputManager.h" />
-    <ClInclude Include="Object\Boss.h" />
-    <ClInclude Include="Object\Enemy.h" />
-    <ClInclude Include="Object\EnemyBase.h" />
-    <ClInclude Include="Object\Player.h" />
-    <ClInclude Include="Scene\PauseScene.h" />
+    <ClInclude Include="Manager\InputManager.h" />
+    <ClInclude Include="Manager\SceneManager.h" />
+    <ClInclude Include="Common\Quaternion.h" />
+    <ClInclude Include="Scene\BaseScene.h" />
     <ClInclude Include="Scene\GameScene.h" />
     <ClInclude Include="Scene\ResultScene.h" />
-    <ClInclude Include="Scene\Manager\SceneManager.h" />
-    <ClInclude Include="Scene\BaseScene.h" />
     <ClInclude Include="Scene\SelectScene.h" />
     <ClInclude Include="Scene\TitleScene.h" />
-    <ClInclude Include="Object\Stage.h" />
-    <ClInclude Include="Object\Weapon.h" />
+    <ClInclude Include="Common\Transform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
