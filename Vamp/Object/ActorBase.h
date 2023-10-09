@@ -5,7 +5,7 @@
 #include"ObjectBase.h"
 
 class ActorBase;
-using uniqueActor = std::list<std::unique_ptr<ActorBase>>;
+using sharedActor = std::shared_ptr<ActorBase>;
 
 class ActorBase :
 	public ObjectBase

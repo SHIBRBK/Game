@@ -16,7 +16,7 @@ public:
 	virtual ~BaseScene() {};
 	// ‰Šú‰»ˆ—
 	virtual bool Init(void) = 0;
-	virtual void Update()=0;
+	virtual void Update(InputManager& input)=0;
 	virtual void Draw()=0;
 private:
 

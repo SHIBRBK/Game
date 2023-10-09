@@ -31,7 +31,7 @@ public:
 
 	void Init(void);
 	void Init3D(void);
-	void Update(void);
+	void Update(InputManager& input);
 	void Draw(void);
 
 	// ƒŠƒ\[ƒX‚Ì”jŠü

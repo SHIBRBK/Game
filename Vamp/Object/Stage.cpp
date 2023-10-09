@@ -2,6 +2,7 @@
 #include "Stage.h"
 #include "../Manager/ResourceManager.h"
 #include "../AssetManager.h"
+#include "../Application.h"
 //#include"../Assets/Model/Stage/"
 
 Stage::Stage() :ObjectBase()
@@ -12,7 +13,7 @@ Stage::Stage() :ObjectBase()
 
 bool Stage::Init()
 {
-    tra_.modelId = MV1LoadModel("../Assets/Model/Stage/Bridge.mv1");
+    tra_.modelId = MV1LoadModel((Application::PATH_MODEL+"Stage/MainPlanet.mv1").c_str());
     tra_.scl = VGet(SCALE, SCALE, SCALE);
     tra_.quaRot = Quaternion();
     tra_.quaRotLocal =

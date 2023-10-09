@@ -10,10 +10,10 @@ bool SelectScene::Init()
     return true;
 }
 
-void SelectScene::Update()
+void SelectScene::Update(InputManager& input)
 {
     // ƒV[ƒ“‘JˆÚ
-    InputManager& input = InputManager::GetInstance();
+    
     if (input.IsTriggered("next"))
     {
         SceneManager::GetInstance().ChangeScene(SceneManager::SCENE_ID::GAME);

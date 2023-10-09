@@ -11,10 +11,10 @@ bool ResultScene::Init()
     return true;
 }
 
-void ResultScene::Update()
+void ResultScene::Update(InputManager& input)
 {
     // ƒV[ƒ“‘JˆÚ
-    InputManager& input = InputManager::GetInstance();
+   
     if (input.IsTriggered("next"))
     {
         SceneManager::GetInstance().ChangeScene(SceneManager::SCENE_ID::TITLE);

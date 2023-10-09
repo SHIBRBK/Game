@@ -80,7 +80,7 @@ void SceneManager::Init3D(void)
 
 }
 
-void SceneManager::Update(void)
+void SceneManager::Update(InputManager& input)
 {
 
 	if (scene_ == nullptr)
@@ -101,7 +101,7 @@ void SceneManager::Update(void)
 	}
 	else
 	{
-		scene_->Update();
+		scene_->Update(input);
 	}
 
 	// ƒJƒƒ‰XV

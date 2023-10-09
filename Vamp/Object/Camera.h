@@ -84,7 +84,8 @@ public:
 	void ChangeMode(MODE mode);
 
 	// 追従対象の設定
-	void SetFollow(weakConsterTra follow);
+	void SetFollow(const Transform* target);
+	void SetFollow(std::shared_ptr<const Transform> follow);
 
 	void SetPlayerPos(const Transform* target);
 	void SetPlayerPos(sharedConsterTra target);
@@ -94,7 +95,7 @@ private:
 	const Transform* target_;
 
 	// カメラが追従対象とするTransform
-	sharedConsterTra followTransform_;
+	std::shared_ptr<const Transform> followTransform_;
 
 	// カメラモード
 	MODE mode_;

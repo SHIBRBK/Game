@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+class InputManager;
+
 class Application
 {
 
@@ -27,7 +29,7 @@ public:
 	void Init(void);
 
 	// ゲームループの開始
-	void Run(void);
+	void Run(InputManager& input);
 
 	// リソースの破棄
 	void Destroy(void);

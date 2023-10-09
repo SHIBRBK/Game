@@ -7,9 +7,9 @@
 
 Application* Application::instance_ = nullptr;
 
-const std::string Application::PATH_IMAGE = "Data/Image/";
-const std::string Application::PATH_MODEL = "Data/Model/";
-const std::string Application::PATH_EFFECT = "Data/Effect/";
+const std::string Application::PATH_IMAGE = "Assets/Image/";
+const std::string Application::PATH_MODEL = "Assets/Model/";
+const std::string Application::PATH_EFFECT = "Assets/Effect/";
 
 void Application::CreateInstance(void)
 {
@@ -59,10 +59,10 @@ void Application::Init(void)
 
 }
 
-void Application::Run(void)
+void Application::Run(InputManager& input)
 {
 
-	auto& inputManager = InputManager::GetInstance();
+	InputManager& inputManager =input;
 	auto& sceneManager = SceneManager::GetInstance();
 
 	// ÉQÅ[ÉÄÉãÅ[Év
@@ -70,7 +70,7 @@ void Application::Run(void)
 	{
 
 		inputManager.Update();
-		sceneManager.Update();
+		sceneManager.Update(inputManager);
 
 		sceneManager.Draw();
 

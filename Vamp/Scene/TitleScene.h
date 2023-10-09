@@ -7,7 +7,7 @@ class TitleScene :
 public:
 	TitleScene();
 	bool Init(void) override;
-	void Update() override;
+	void Update(InputManager& input) override;
 	virtual void Draw()override;
 private:
 };

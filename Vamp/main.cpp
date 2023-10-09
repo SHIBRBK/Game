@@ -4,6 +4,8 @@
 #include <DxLib.h>
 #include "Application.h"
 
+#include "Manager/InputManager.h"
+
 
 // WinMainŠÖ”
 //---------------------------------
@@ -23,9 +25,9 @@ int WINAPI WinMain(
 		// ‰Šú‰»¸”s
 		return -1;
 	}
-
+	InputManager& input = InputManager::GetInstance();
 	// Às
-	instance.Run();
+	instance.Run(input);
 
 	// ‰ğ•ú
 	instance.Destroy();

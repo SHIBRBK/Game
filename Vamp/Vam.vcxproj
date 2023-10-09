@@ -161,6 +161,7 @@
     <ClCompile Include="Object\ActorBase.cpp" />
     <ClCompile Include="Common\Fader.cpp" />
     <ClCompile Include="Object\EnemyBase.cpp" />
+    <ClCompile Include="Object\Knife.cpp" />
     <ClCompile Include="Object\ObjectBase.cpp" />
     <ClCompile Include="Object\Camera.cpp" />
     <ClCompile Include="Manager\InputManager.cpp" />
@@ -169,6 +170,9 @@
     <ClCompile Include="Manager\ResourceManager.cpp" />
     <ClCompile Include="Manager\Resource.cpp" />
     <ClCompile Include="Object\Player.cpp" />
+    <ClCompile Include="Object\ShotGun.cpp" />
+    <ClCompile Include="Object\SkyDome.cpp" />
+    <ClCompile Include="Object\WeaponBase.cpp" />
     <ClCompile Include="Scene\BaseScene.cpp" />
     <ClCompile Include="Scene\Fader.cpp" />
     <ClCompile Include="Scene\GameScene.cpp" />
@@ -178,7 +182,6 @@
     <ClCompile Include="Scene\TitleScene.cpp" />
     <ClCompile Include="Common\Transform.cpp" />
     <ClCompile Include="Object\Stage.cpp" />
-    <ClCompile Include="Object\weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
@@ -187,6 +190,7 @@
     <ClInclude Include="Object\ActorBase.h" />
     <ClInclude Include="Common\Fader.h" />
     <ClInclude Include="Object\EnemyBase.h" />
+    <ClInclude Include="Object\Knife.h" />
     <ClInclude Include="Object\ObjectBase.h" />
     <ClInclude Include="Object\Camera.h" />
     <ClInclude Include="Manager\InputManager.h" />
@@ -195,6 +199,9 @@
     <ClInclude Include="Manager\ResourceManager.h" />
     <ClInclude Include="Manager\Resource.h" />
     <ClInclude Include="Object\Player.h" />
+    <ClInclude Include="Object\ShotGun.h" />
+    <ClInclude Include="Object\SkyDome.h" />
+    <ClInclude Include="Object\WeaponBase.h" />
     <ClInclude Include="Scene\BaseScene.h" />
     <ClInclude Include="Scene\Fader.h" />
     <ClInclude Include="Scene\GameScene.h" />
@@ -203,7 +210,6 @@
     <ClInclude Include="Scene\TitleScene.h" />
     <ClInclude Include="Common\Transform.h" />
     <ClInclude Include="Object\Stage.h" />
-    <ClInclude Include="Object\weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

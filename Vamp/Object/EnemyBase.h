@@ -3,17 +3,19 @@
 #include"ActorBase.h"
 
 class EnemyBase;
-using uniqueEnemys = std::unique_ptr<EnemyBase>;
+using sharedEnemys = std::shared_ptr<EnemyBase>;
 
-class EnemyBase :
-	public ActorBase
+class Player;
+
+
+class EnemyBase
 {
 public:
 	EnemyBase();
-	virtual bool Init() override;
-	virtual void Update()override;
-	virtual void Draw()override;
-	virtual void Release()override;
+	virtual bool Init()=0;
+	virtual void Update(Player& player) = 0;
+	virtual void Draw() = 0;
+	virtual void Release() = 0;
 
 
 private:

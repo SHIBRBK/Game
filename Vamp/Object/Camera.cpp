@@ -9,7 +9,7 @@ Camera::Camera(void)
 	angles_ = VECTOR();
 	cameraUp_ = VECTOR();
 	mode_ = MODE::NONE;
-	pos_ = { 0.0f,0.0f,0.0f };
+	pos_ = { 0.0f,50.0f,0.0f };
 	targetPos_ = { 0.0f,0.0f,0.0f };
 	//followTransform_ = nullptr;
 }
@@ -59,15 +59,22 @@ void Camera::SetBeforeDraw(void)
 
 void Camera::Draw(void)
 {
-	DrawFormatString(0,0,0xffffff,"x=%f,y=%f,z=%f",
+	DrawFormatString(0,0,0xffffff,"CameraPos x=%f,y=%f,z=%f",
 	pos_.x,
 	pos_.y,
 	pos_.z);
 }
 
-void Camera::SetFollow(weakConsterTra follow)
+
+void Camera::SetFollow(const Transform* target)
 {
-	followTransform_ = follow.lock();
+	target_ = target;
+}
+
+
+void Camera::SetFollow(std::shared_ptr<const Transform> follow)
+{
+	followTransform_ = follow;
 }
 
 void Camera::SetPlayerPos(const Transform* target)
@@ -154,7 +161,7 @@ void Camera::SyncFollow(void)
 {
 
 	// ìØä˙êÊÇÃà íu
-	VECTOR pos = followTransform_->pos;
+	VECTOR pos = target_->pos;
 
 	// èdóÕÇÃï˚å¸êßå‰Ç…è]Ç§
 	// ê≥ñ Ç©ÇÁê›íËÇ≥ÇÍÇΩYé≤ï™ÅAâÒì]Ç≥ÇπÇÈ
